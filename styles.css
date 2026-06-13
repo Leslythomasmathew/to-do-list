@@ -73,7 +73,7 @@ body {
   background: hsl(0, 100%, 50%, 0.2);
 }
 
-.list {
+#list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -82,7 +82,7 @@ body {
   gap: 0.5rem;
 }
 
-.list li {
+#list li {
   display: flex;
   gap: .5rem;
   align-items: center;
@@ -92,7 +92,7 @@ body {
   border-radius: 0.25rem;
 }
 
-.list li label {
+#list li label {
   display: flex;
   gap: .5rem;
   cursor: pointer;
@@ -100,8 +100,14 @@ body {
   flex: 1;
 }
 
-.list li label input {
+#list li label input {
   cursor: pointer;
   width: 18px;
   height: 18px;
+}
+
+/* Line-through text decoration when checked */
+#list li label input:checked + span {
+  text-decoration: line-through;
+  color: #888;
 }
